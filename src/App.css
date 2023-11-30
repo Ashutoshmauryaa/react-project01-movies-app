@@ -36,3 +36,161 @@
     transform: rotate(360deg);
   }
 }
+
+.banner-card {
+  height: 70vh;
+  width: 100vw;
+  margin-top: 0.001rem;
+  margin-bottom: 3vh;
+  position: relative;
+  color: white;
+}
+.banner-img {
+  height: 100vh;
+  width: 100%;
+  /* object-fit: contain; */
+}
+.banner-title {
+  position: absolute;
+  top: 70vh;
+  left: 5vw;
+  text-align: left;
+  font-size: 40px;
+}
+.banner-text {
+  position: absolute;
+  top: 85vh;
+  left: 5vw;
+  height: 4.5rem;
+  overflow: hidden;
+  margin-right: 5vw;
+  text-align: left;
+  /* font-weight: bold; */
+  font-size: 18px;
+}
+@media screen and (max-width: 400px) {
+  .banner-card {
+    height: 30vh;
+  }
+  .banner-img {
+    height: 30vh;
+  }
+  .banner-title {
+    top: 5vh;
+    left: 5vw;
+    font-size: 20px;
+  }
+  .banner-text {
+    top: 15vh;
+    left: 5vw;
+    text-align: left;
+    font-size: 16px;
+    overflow: hidden;
+  }
+  .movie-card {
+    width: 40vw;
+    margin: 1rem;
+  }
+  .movie-button {
+    width: 80%;
+    height: 50%;
+  }
+  .movie-img {
+    width: 20vw;
+    height: 20vh;
+  }
+  .Movies-app {
+    margin-top: 3rem;
+  }
+}
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+}
+.movie-card {
+  width: 20vw;
+  margin: 1rem;
+  color: white;
+  position: relative;
+}
+.movie-title {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 20px;
+}
+.movie-button {
+  position: absolute;
+  bottom: 2rem;
+}
+.movie-img {
+  height: 25vh;
+  width: 20vw;
+}
+.favourite-genres {
+  padding: 3rem;
+}
+.favourite-table {
+  padding: 3rem;
+  overflow: auto;
+}
+@media screen and (min-width: 400px) {
+  .Movies-app {
+    margin-top: 14rem;
+  }
+  /* .banner-title {
+    position: absolute;
+    top: 40vh;
+    left: 5vw;
+    font-size: 20px;
+  }
+  .banner-text {
+    position: absolute;
+    top: 50vh;
+    left: 5vw;
+    text-align: left;
+    font-size: 16px;
+  } */
+}
+@media (400px<= width <= 1110px) {
+  .Movies-app {
+    margin-top: 10rem;
+  }
+  .banner-title {
+    position: absolute;
+    top: 45vh;
+    left: 5vw;
+    text-align: left;
+    font-size: 28px;
+  }
+  .banner-text {
+    position: absolute;
+    top: 55vh;
+    left: 5vw;
+    height: 4.5rem;
+    overflow: hidden;
+    margin-right: 5vw;
+    text-align: left;
+    /* font-weight: bold; */
+    font-size: 17px;
+  }
+}
+
+.Navbar {
+  width: 100%;
+  /* position: fixed; */
+  display: flex;
+  background-color: #062563;
+  font-family: "sans-serif";
+  font-size: 5vw;
+  justify-content: left;
+  /* padding-bottom: 15px; */
+  color: white;
+  /* z-index: 100; */
+  box-shadow: 0px 1px 5px black;
+}
+/* .Movies-app {
+  margin-top: 12rem;
+} */
