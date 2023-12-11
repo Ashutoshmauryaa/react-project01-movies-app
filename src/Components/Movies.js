@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import { movies } from "./getMovies";
 import axios from "axios";
-import { movies } from "./getMovies";
 
 export default class extends Component {
   constructor() {
@@ -47,7 +46,7 @@ export default class extends Component {
     );
   };
   handleprevious = () => {
-    if (this.state.currpage != 1)
+    if (this.state.currpage !== 1)
       this.setState(
         {
           currpage: this.state.currpage - 1,
@@ -56,7 +55,7 @@ export default class extends Component {
       );
   };
   handlepageLoad = (value) => {
-    if (value != this.state.currpage) {
+    if (value !== this.state.currpage) {
       this.setState(
         {
           currpage: value,
@@ -68,7 +67,7 @@ export default class extends Component {
   handleFavourite = (movie) => {
     let olddata = JSON.parse(localStorage.getItem("movies-app") || "[]");
     if (this.state.favourites.includes(movie.id)) {
-      olddata = olddata.filter((m) => m.id != movie.id);
+      olddata = olddata.filter((m) => m.id !== movie.id);
     } else {
       olddata.push(movie);
     }
@@ -87,7 +86,7 @@ export default class extends Component {
     // const movielist = movies.results;
     return (
       <>
-        {this.state.movies.length == 0 ? (
+        {this.state.movies.length === 0 ? (
           <div class="spinner-border text-primary" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
@@ -122,7 +121,7 @@ export default class extends Component {
                           width: "100%",
                         }}
                       >
-                        {this.state.hover == movieobj.id && (
+                        {this.state.hover === movieobj.id && (
                           <a
                             className="btn btn-primary movie-button"
                             onClick={() => this.handleFavourite(movieobj)}

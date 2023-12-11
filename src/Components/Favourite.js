@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { movies } from "./getMovies";
-import { json } from "react-router-dom";
 
 export default class extends Component {
   constructor() {
@@ -98,7 +96,7 @@ export default class extends Component {
   handleDelete = (id) => {
     let newarr = [];
     newarr = this.state.movies.filter((movieobj) => {
-      return movieobj.id != id;
+      return movieobj.id !== id;
     });
     this.setState({
       movies: newarr,
@@ -129,7 +127,7 @@ export default class extends Component {
       37: "Western",
     };
     let filterarr = [];
-    if (this.state.currText == "") {
+    if (this.state.currText === "") {
       //searching
       filterarr = this.state.movies;
     } else {
@@ -139,9 +137,9 @@ export default class extends Component {
       });
     }
 
-    if (this.state.currgen != "All Genres") {
+    if (this.state.currgen !== "All Genres") {
       filterarr = this.state.movies.filter(
-        (movieobj) => genreids[movieobj.genre_ids[0]] == this.state.currgen
+        (movieobj) => genreids[movieobj.genre_ids[0]] === this.state.currgen
       );
     }
 
@@ -161,7 +159,7 @@ export default class extends Component {
               <div className="col-lg-3 col-sm-12">
                 <ul className="list-group favourite-genres">
                   {this.state.genres.map((genre) =>
-                    this.state.currgen == genre ? (
+                    this.state.currgen === genre ? (
                       <li
                         class="list-group-item"
                         style={{
